@@ -10,15 +10,28 @@ public class Zad1 : MonoBehaviour
     public float delay = 3.0f;
     int objectCounter = 0;
     public int iloscOjektow = 10;
-    public GameObject platforma; //get renderer collider().bounds.size
+    Collider m_Collider;
+    Vector3 m_Size;
+    int x,z;
     // obiekt do generowania
     public GameObject block;
-
+    /*
+    Material[] array = new Material[5];
+    public Material m1;
+    public Material m2;
+    public Material m3;
+    public Material m4;
+    public Material m5;
+    */
     void Start()
     {
+        m_Collider = GetComponent<Collider>();
+        m_Size = m_Collider.bounds.size;
+        x=(int) m_Size.x;
+        z=(int) m_Size.z;
         // w momecie uruchomienia generuje 10 kostek w losowych miejscach
-        List<int> pozycje_x = new List<int>(Enumerable.Range(0, 20).OrderBy(x => Guid.NewGuid()).Take(10));
-        List<int> pozycje_z = new List<int>(Enumerable.Range(0, 20).OrderBy(x => Guid.NewGuid()).Take(10));
+        List<int> pozycje_x = new List<int>(Enumerable.Range(0, x-1).OrderBy(x => Guid.NewGuid()).Take(10));
+        List<int> pozycje_z = new List<int>(Enumerable.Range(-z+1, z-1).OrderBy(x => Guid.NewGuid()).Take(10));
         
         for(int i=0; i<iloscOjektow; i++)
         {
