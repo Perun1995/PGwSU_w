@@ -1,6 +1,6 @@
 1) Player; porusza się góra, dół, prawo, lewo
 2) Ziemia; wejście gracza(1) niszczy blok, blokuje przemieszczanie głazów(4)
 3) Bloki z metalu; nie można ich zniszczyć, ani przesunąć
-4) Głaz; oddziałowyje na niego grawitacja, może zostać zatrzymany przez ziemię(2), blok z metalu(3) oraz diamenty(5)
+4) Głaz; działa na niego grawitacja, może zostać zatrzymany przez ziemię(2), blok z metalu(3) oraz diamenty(5)
 5) Diamenty; po wejściu na blok z diamentem zwiększa się punktacja
 6) Wyjście; aktywuje się w momencie zebrania wszystkich diamentów(5)
