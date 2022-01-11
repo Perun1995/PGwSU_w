@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
                 Level++;
                 panelLevelCompleted.SetActive(true);
                 SwitchState(State.LOADLEVEL, 2f);
+                wyjscieGracza = false;
                 break;
             case State.LOADLEVEL:
                 if(Level >= levels.Length)
